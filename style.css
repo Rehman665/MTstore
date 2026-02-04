@@ -1,0 +1,691 @@
+/* CSS Variables for Color Scheme */
+:root {
+    --primary: #2a2d43;
+    /* Deep navy blue */
+    --secondary: #d4af37;
+    /* Gold accent */
+    --accent1: #8b0000;
+    /* Deep red for perfumes */
+    --accent2: #0066cc;
+    /* Electric blue for chargers */
+    --light: #f5f5f5;
+    --dark: #1a1c2b;
+    --gray: #e0e0e0;
+    --shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    --transition: all 0.3s ease;
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--light);
+    color: var(--dark);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #2a2d43 ;
+    padding: 1rem 2rem;
+    display: flex;
+    /* margin: 20px; */
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo h1 {
+    color: var(--secondary);
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: white;
+    margin-left: 5px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 1.5rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 0.8rem;
+    border-radius: 4px;
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    background-color: var(--secondary);
+    color: var(--primary);
+}
+
+.menu-toggle {
+    display: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    background-color: rgba(42, 45, 67, 0.9), ;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    background-image: cover;
+    text-align: center;
+    padding: 5rem 2rem;
+    margin-bottom: 3rem;
+    background: url(./asset/backimg2.jpeg) no-repeat center center/cover;
+    height: 90vh;
+    max-height: 500PX;
+    margin: 20px;
+    margin-top: 0;
+    
+
+}
+
+.hero h2 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    color: var(--secondary);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--secondary);
+    color: var(--primary);
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Section Titles */
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.section-title h2 {
+    font-size: 2.2rem;
+    color: var(--primary);
+    display: inline-block;
+}
+
+.section-title h2::after {
+    content: '';
+    position: absolute;
+    width: 70px;
+    height: 4px;
+    background-color: var(--secondary);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.charger-title {
+    color: var(--accent2);
+}
+
+.perfume-title {
+    color: var(--accent1);
+}
+
+/* Cards Section */
+/* Main Container jo cards ko row mein layega */
+.card-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-evenly;
+    padding: 50px 20px;
+
+}
+
+:root {
+    --bg-color: #2a2d43;
+    --text-gold: #22ff00;
+    /* MT Store ka theme color */
+    --white: #ffffff;
+}
+
+.product-card {
+    width: 300px;
+    background-color: #2a2d43;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 20px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.image-container {
+    width: 100%;
+    height: 290px;
+    object-fit: cover;
+    overflow: hidden;
+    background: #1a1c2c;
+    /* Thoda dark contrast */
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Image ko crop karke set karega */
+}
+
+.card-details {
+    padding: 20px;
+    color: var(--white);
+}
+
+.category {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: gold;
+    letter-spacing: 1px;
+}
+
+.card-details h3 {
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.card-details p {
+    font-size: 14px;
+    color: #ccc;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.price-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    color: whitesmoke;
+}
+
+.add-to-cart-btn {
+    background: var(--text-gold);
+    color: #000;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.add-to-cart-btn:hover {
+    background: #22ff00;
+}
+
+
+
+/* --- 4. Cart Drawer Styles (Keep previous styles) --- */
+.cart-drawer {
+    /* ... (Same as before) ... */
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 350px;
+    height: 100%;
+    background-color: white;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 100;
+    padding: var(--spacing);
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.cart-drawer.open {
+    transform: translateX(0);
+}
+
+#overlay {
+    /* ... (Same as before) ... */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+    display: none;
+}
+
+.cart-items {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+.cart-items li {
+    padding: 10px 0;
+    border-bottom: 1px dashed #ccc;
+    display: flex;
+    justify-content: space-between;
+}
+
+.checkout-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: not-allowed;
+    margin-top: 15px;
+}
+
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.charger-card {
+    border-top: 5px solid var(--accent2);
+}
+
+.perfume-card {
+    border-top: 5px solid var(--accent1);
+}
+
+.card-img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+}
+
+.charger-card h3 {
+    color: var(--accent2);
+}
+
+.perfume-card h3 {
+    color: var(--accent1);
+}
+
+.card p {
+    color: #666;
+    margin-bottom: 1.2rem;
+}
+
+.card-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.charger-price {
+    color: var(--accent2);
+}
+
+.perfume-price {
+    color: var(--accent1);
+}
+
+.card-button {
+    display: inline-block;
+    padding: 0.6rem 1.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+    ;
+    text-align: center;
+}
+
+.charger-button {
+    background-color: var(--accent2);
+    color: white;
+}
+
+.charger-button:hover {
+    background-color: #0052a3;
+}
+
+.perfume-button {
+    background-color: var(--accent1);
+    color: white;
+}
+
+.perfume-button:hover {
+    background-color: #690000;
+}
+
+/* About Section */
+#about {
+    background-color: white;
+    padding: 4rem 0;
+    margin: 3rem 0;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    align-items: center;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-text h3 {
+    color: var(--primary);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.about-text p {
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+.about-stats {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    min-width: 300px;
+}
+
+.stat {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--light);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.stat h3 {
+    font-size: 2.5rem;
+    color: var(--secondary);
+    margin-bottom: 0.5rem;
+}
+
+.stat p {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+/* Footer */
+footer {
+    background-color: #2a2d43;
+    color: white;
+    padding: 3rem 0 1.5rem;
+    margin-top: 3rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 2rem;
+    padding-right: 2rem;
+}
+
+.footer-section h3 {
+    color: var(--secondary);
+    margin-bottom: 1.2rem;
+    font-size: 1.4rem;
+}
+
+.footer-section p {
+    margin-bottom: 1rem;
+    color: #ddd;
+}
+
+
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Halka transparent white */
+    border-radius: 50%;
+    /* Gol banane ke liye */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: #ffcc00;
+    /* MT Store ka gold color hover par */
+    color: #000;
+    transform: translateY(-5px);
+    /* Thoda upar move hoga */
+}
+
+.social-icons a:hover {
+    background-color: var(--secondary);
+    color: var(--primary);
+    transform: translateY(-3px);
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+
+.newsletter-form input {
+    padding: 0.8rem;
+    border-radius: 4px;
+    border: none;
+    font-size: 1rem;
+}
+
+.newsletter-form button {
+    background-color: var(--secondary);
+    color: var(--primary);
+    border: none;
+    padding: 0.8rem;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.newsletter-form button:hover {
+    background-color: white;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--primary);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease-in-out;
+        overflow: hidden;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 0;
+        text-align: center;
+    }
+
+    .nav-links a {
+        display: flex;
+        padding: 0.8rem;
+        justify-content: start;
+        padding-left: 30px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .hero h2 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .footer-section {
+        flex: 100%;
+        padding-right: 0;
+    }
+
+    .about-stats {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 3rem 1rem;
+    }
+
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+
+    .section-title h2 {
+        font-size: 1.8rem;
+    }
+
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+}
