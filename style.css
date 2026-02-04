@@ -183,270 +183,207 @@ body {
 /* Cards Section */
 /* Main Container jo cards ko row mein layega */
 .card-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    justify-content: space-evenly;
-    
-
+display: flex;
+flex-wrap: wrap;
+gap: 25px; /* Reduced gap */
+justify-content: space-evenly;
 }
 
 :root {
-    --bg-color: #2a2d43;
-    --text-gold: #22ff00;
-    /* MT Store ka theme color */
-    --white: #ffffff;
+--bg-color: #2a2d43;
+--text-gold: #22ff00;
+--white: #ffffff;
 }
 
 .product-card {
-    width: 300px;
-    background-color: #2a2d43;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-   
-    font-family: 'Segoe UI', sans-serif;
+width: 250px; /* Reduced from 300px */
+background-color: #2a2d43;
+border-radius: 12px; /* Slightly smaller radius */
+overflow: hidden;
+box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Softer shadow */
+transition: transform 0.3s ease;
+border: 1px solid rgba(255, 255, 255, 0.1);
+font-family: 'Segoe UI', sans-serif;
 }
 
 .product-card:hover {
-    transform: translateY(-10px);
+transform: translateY(-6px); /* Less lift on hover */
 }
 
 .image-container {
-    width: 100%;
-    height: 290px;
-    object-fit: cover;
-    overflow: hidden;
-    background: #1a1c2c;
-    /* Thoda dark contrast */
+width: 100%;
+height: 220px; /* Reduced from 280px */
+object-fit: cover;
+overflow: hidden;
+background: #1a1c2c;
 }
 
 .image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    /* Image ko crop karke set karega */
+width: 100%;
+height: 100%;
+object-fit: cover;
 }
 
 .card-details {
-    padding: 20px;
-    color: var(--white);
+padding: 15px; /* Reduced padding */
+color: var(--white);
 }
 
 .category {
-    font-size: 12px;
-    text-transform: uppercase;
-    color: gold;
-    letter-spacing: 1px;
+font-size: 11px; /* Slightly smaller */
+text-transform: uppercase;
+color: gold;
+letter-spacing: 1px;
 }
 
 .card-details h3 {
-    margin: 10px 0;
-    font-size: 20px;
+ /* Reduced margin */
+font-size: 18px; /* Smaller font */
 }
 
 .card-details p {
-    font-size: 14px;
-    color: #ccc;
-    line-height: 1.5;
-    margin-bottom: 20px;
+font-size: 13px; /* Smaller font */
+color: #ccc;
+line-height: 1.4;
+margin-bottom: 15px;
 }
 
 .price-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+display: flex;
+justify-content: space-between;
+align-items: center;
 }
 
 .price {
-    font-size: 18px;
-    font-weight: bold;
-    color: whitesmoke;
+font-size: 16px; /* Smaller font */
+font-weight: bold;
+color: whitesmoke;
 }
 
 .add-to-cart-btn {
-    background: var(--text-gold);
-    color: #000;
-    border: none;
-    padding: 8px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background 0.3s;
+background: var(--text-gold);
+color: #000;
+border: none;
+padding: 7px 12px; /* Smaller padding */
+border-radius: 5px;
+cursor: pointer;
+font-weight: bold;
+transition: background 0.3s;
+font-size: 13px;
 }
 
 .add-to-cart-btn:hover {
-    background: #22ff00;
+background: #22ff00;
 }
 
-
-
-/* --- 4. Cart Drawer Styles (Keep previous styles) --- */
-.cart-drawer {
-    /* ... (Same as before) ... */
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 350px;
-    height: 100%;
-    background-color: white;
-    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
-    transform: translateX(100%);
-    transition: transform 0.3s ease-in-out;
-    z-index: 100;
-    padding: var(--spacing);
-    display: flex;
-    flex-direction: column;
-
-}
-
-
-.cart-drawer.open {
-    transform: translateX(0);
-}
-
-#overlay {
-    /* ... (Same as before) ... */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 99;
-    display: none;
-}
-
-.cart-items {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0;
-    overflow-y: auto;
-    flex-grow: 1;
-}
-
-.cart-items li {
-    padding: 10px 0;
-    border-bottom: 1px dashed #ccc;
-    display: flex;
-    justify-content: space-between;
-}
-
-.checkout-btn {
-    width: 100%;
-    padding: 12px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: var(--border-radius);
-    cursor: not-allowed;
-    margin-top: 15px;
-}
-
-
+/* --- Cards Container (if using grid) --- */
 .cards-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 2rem;
-    margin-bottom: 4rem;
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Smaller minmax */
+gap: 1.5rem; /* Reduced gap */
+margin-bottom: 3rem;
 }
 
 .card {
-    background-color: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: var(--shadow);
-    transition: var(--transition);
+background-color: white;
+border-radius: 8px;
+overflow: hidden;
+box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+transition: transform 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-}
-
-.charger-card {
-    border-top: 5px solid var(--accent2);
-}
-
-.perfume-card {
-    border-top: 5px solid var(--accent1);
+transform: translateY(-6px);
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
 }
 
 .card-img {
-    height: 200px;
-    width: 100%;
-    object-fit: cover;
+height: 180px; /* Reduced height */
+width: 100%;
+object-fit: cover;
 }
 
 .card-content {
-    padding: 1.5rem;
+padding: 1.2rem; /* Reduced padding */
 }
 
 .card h3 {
-    font-size: 1.4rem;
-    margin-bottom: 0.8rem;
-}
-
-.charger-card h3 {
-    color: var(--accent2);
-}
-
-.perfume-card h3 {
-    color: var(--accent1);
+font-size: 1.2rem; /* Smaller font */
+margin-bottom: 0.6rem;
 }
 
 .card p {
-    color: #666;
-    margin-bottom: 1.2rem;
+font-size: 0.9rem; /* Smaller font */
+margin-bottom: 1rem;
 }
 
 .card-price {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-}
-
-.charger-price {
-    color: var(--accent2);
-}
-
-.perfume-price {
-    color: var(--accent1);
+font-size: 1.3rem; /* Smaller font */
+margin-bottom: 0.8rem;
 }
 
 .card-button {
-    display: inline-block;
-    padding: 0.6rem 1.5rem;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: var(--transition);
-    border: none;
-    cursor: pointer;
-    ;
-    text-align: center;
+padding: 0.5rem 1.2rem; /* Smaller padding */
+font-size: 0.9rem;
 }
 
-.charger-button {
-    background-color: var(--accent2);
-    color: white;
+/* Cart Drawer (unchanged) */
+.cart-drawer {
+position: fixed;
+top: 0;
+right: 0;
+width: 350px;
+height: 100%;
+background-color: white;
+box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+transform: translateX(100%);
+transition: transform 0.3s ease-in-out;
+z-index: 100;
+padding: var(--spacing);
+display: flex;
+flex-direction: column;
 }
 
-.charger-button:hover {
-    background-color: #0052a3;
+.cart-drawer.open {
+transform: translateX(0);
 }
 
-.perfume-button {
-    background-color: var(--accent1);
-    color: white;
+#overlay {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.5);
+z-index: 99;
+display: none;
 }
 
-.perfume-button:hover {
-    background-color: #690000;
+.cart-items {
+list-style: none;
+padding: 0;
+margin: 10px 0;
+overflow-y: auto;
+flex-grow: 1;
 }
 
+.cart-items li {
+padding: 10px 0;
+border-bottom: 1px dashed #ccc;
+display: flex;
+justify-content: space-between;
+}
+
+.checkout-btn {
+width: 100%;
+padding: 12px;
+background-color: #28a745;
+color: white;
+border: none;
+border-radius: var(--border-radius);
+cursor: not-allowed;
+margin-top: 15px;
+}
 /* About Section */
 #about {
     background-color: white;
