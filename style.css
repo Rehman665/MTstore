@@ -66,6 +66,71 @@ body {
     margin-left: 5px;
 }
 
+
+
+
+/* Search Box Styling */
+.search-container {
+    margin: 0 20px;
+    flex: 1;
+    max-width: 400px;
+}
+
+.search-box {
+    position: relative;
+    width: 100%;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 10px 40px 10px 40px;
+    border: 2px solid #22ff00;
+    border-radius: 25px;
+    background-color: #1a1c2c;
+    color: white;
+    font-size: 14px;
+    outline: none;
+}
+
+.search-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #22ff00;
+}
+
+.clear-search {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: #888;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 5px;
+}
+
+.clear-search:hover {
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .search-container {
+        order: 3;
+        width: 100%;
+        margin: 10px 0;
+        max-width: 100%;
+    }
+    
+    .navbar {
+        flex-wrap: wrap;
+    }
+}
+
 .nav-links {
     display: flex;
     list-style: none;
@@ -96,6 +161,9 @@ body {
     cursor: pointer;
 }
 
+
+
+
 /* Hero Section */
 .hero {
     background-color: rgba(42, 45, 67, 0.9), ;
@@ -125,6 +193,7 @@ body {
     font-size: 1.2rem;
     max-width: 700px;
     margin: 0 auto 2rem;
+    color: rgb(218, 165, 32);
 }
 
 .cta-button {

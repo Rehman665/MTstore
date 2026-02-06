@@ -11,24 +11,39 @@
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar">
-        <div class="logo">
-            
-            <img src="./asset/ChatGPT_Image_Jan_31__2026__07_32_05_PM-removebg-preview (1).png
-            "  width ="120px">
+    <!-- Navbar -->
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="logo">
+        <img src="./asset/ChatGPT_Image_Jan_31__2026__07_32_05_PM-removebg-preview (1).png" 
+             width="120px" alt="Logo">
+    </div>
+    
+    <!-- Search Bar -->
+    <div class="search-container">
+        <div class="search-box">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" 
+                   id="searchInput" 
+                   placeholder="Search chargers, perfumes..."
+                   aria-label="Search products">
+            <button type="button" class="clear-search" id="clearSearch" style="display: none;">
+                <i class="fas fa-times"></i>
+            </button>
         </div>
-        <div class="menu-toggle" id="menuToggle">
-            <i class="fas fa-bars"></i>
-        </div>
-        <ul class="nav-links" id="navLinks">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#chargers">Chargers</a></li>
-            <li><a href="#perfumes">Perfumes</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
+    </div>
+    
+    <div class="menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+    </div>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#chargers">Chargers</a></li>
+        <li><a href="#perfumes">Perfumes</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container">
@@ -46,6 +61,9 @@
             <div class="section-title">
                 <h2 class="charger-title">Premium Chargers</h2>
             </div>
+
+
+            
 
             <div class="card-row">
                 <div class="product-card">
@@ -454,6 +472,10 @@
                     </div>
                 </div>
 
+
+                
+
+
                 <div class="product-card">
                     <div class="image-container">
                         <img src="./asset/1z1.webp" alt="Dell Laptop Charger">
@@ -476,12 +498,12 @@
 
                 <div class="product-card">
                     <div class="image-container">
-                        <img src="./asset/1z1.webp" alt="Dell Laptop Charger">
+                        <img src="./asset/cardimg18.jpeg" alt="Dell Laptop Charger">
                     </div>
                     <div class="card-details">
                         <span class="category">Accessories</span>
-                        <h3>Dell Original 65W Charger</h3>
-                        <p>High-quality Dell laptop charger with fast charging support and durable cable.</p>
+                        <h3>Office Classic Men Fragrance</h3>
+                        <p>"Define your professional presence with a scent that speaks of ambition, elegance, and timeless confidence."</p>
                         <div class="price-section">
                             <span class="price">$35.00</span>
                             <a
@@ -633,6 +655,34 @@
             navLinks.classList.remove('active');
         });
     });
+</script>
+
+
+<script>
+// Minimal working search
+function setupSearch() {
+    const searchInput = document.getElementById('searchInput');
+    
+    if (!searchInput) {
+        console.log("Search input not found!");
+        return;
+    }
+    
+    searchInput.addEventListener('input', function() {
+        const searchTerm = this.value.toLowerCase();
+        const cards = document.querySelectorAll('.product-card');
+        
+        cards.forEach(card => {
+            const text = card.innerText.toLowerCase();
+            card.style.display = text.includes(searchTerm) ? 'block' : 'none';
+        });
+    });
+    
+    console.log("Search setup complete!");
+}
+
+// Run when page loads
+window.onload = setupSearch;
 </script>
 </body>
 
