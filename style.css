@@ -676,6 +676,11 @@ footer {
     .about-stats {
         grid-template-columns: 1fr;
     }
+    .search-box{
+        width: 180px!important
+        ;
+        margin-left: auto;
+    }
 }
 
 @media (max-width: 480px) {
