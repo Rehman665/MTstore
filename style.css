@@ -39,7 +39,7 @@ body {
 /* Navbar Styles */
 .navbar {
     background-color: #2a2d43 ;
-    padding: 1rem 2rem;
+    padding: 0.8em 2rem;
     display: flex;
     /* margin: 20px; */
     justify-content: space-between;
@@ -48,7 +48,41 @@ body {
     top: 0;
     z-index: 100;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+display: flex;
+  align-items: center;
 }
+
+
+
+@media (max-width: 768px) {
+
+  .navbar {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo {
+    order: 1;
+  }
+
+  .search-box {
+    order: 2;
+  }
+
+  .menu-toggle {
+    order: 3;   /* toggle ab search ke baad ayega */
+    margin-left: auto; /* right side pe rahe */
+  }
+}
+
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    margin-left: 40px;   /* gap adjust kar sakti ho: 8px–15px */
+  }
+}
+
 
 .logo {
     display: flex;
@@ -176,9 +210,11 @@ body {
     margin-bottom: 3rem;
     background: url(./asset/backimg2.jpeg) no-repeat center center/cover;
     height: 90vh;
-    max-height: 500PX;
+    max-height: 600PX;
     margin: 20px;
     margin-top: 0;
+    
+    
     
 
 }
