@@ -79,7 +79,8 @@ display: flex;
 
 @media (max-width: 768px) {
   .menu-toggle {
-    margin-left: 40px;   /* gap adjust kar sakti ho: 8px–15px */
+    margin-left: 20px;   /* gap adjust kar sakti ho: 8px–15px */
+    
   }
 }
 
